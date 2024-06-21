@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import './ChatWindow.css';
 
 const ChatWindow = ({ user, messages, onSendMessage }) => {
   const [newMessage, setNewMessage] = useState('');
