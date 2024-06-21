@@ -11,9 +11,9 @@ const ChatWindow = ({ user, MessagesArray, onSendMessage }) => {
 
 
   return (
-    <div className="bg-gray-100 h-96 rounded flex flex-col max-w-lg mx-auto m-9">
+    <div className="bg-gray-100 h-[500px] rounded flex flex-col max-w-lg mx-auto m-9">
 
-      <div className="bg-blue-500 rounded p-4 text-white flex justify-between items-center">
+      <div className="bg-blue-500  rounded p-4 text-white flex justify-between items-center">
         <button id="login" className="hover:bg-blue-400 rounded-md p-1">
           <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="6" r="4" stroke="#ffffff" strokeWidth="1.5"></circle>
