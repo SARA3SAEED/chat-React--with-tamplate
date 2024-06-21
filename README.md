@@ -32,3 +32,6 @@ This React application displays two chat windows for two users, Amy and John. Me
   - `sendMessage`: Function to send a new message.
 
 
+<img src="https://drive.google.com/uc?export=view&id=1i0kNAVNWQbvGPLOW6H2HbcuR9NWIPLh1" alt="Google Drive Image">
+
+
