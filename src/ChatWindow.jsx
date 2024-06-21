@@ -11,9 +11,9 @@ const ChatWindow = ({ user, MessagesArray, onSendMessage }) => {
 
 
   return (
-    <div className="bg-gray-100 h-screen flex flex-col max-w-lg mx-auto ">
+    <div className="bg-gray-100 h-96 rounded flex flex-col max-w-lg mx-auto m-9">
 
-      <div className="bg-blue-500 p-4 text-white flex justify-between items-center">
+      <div className="bg-blue-500 rounded p-4 text-white flex justify-between items-center">
         <button id="login" className="hover:bg-blue-400 rounded-md p-1">
           <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="6" r="4" stroke="#ffffff" strokeWidth="1.5"></circle>
@@ -22,17 +22,21 @@ const ChatWindow = ({ user, MessagesArray, onSendMessage }) => {
         </button>
         <span> <small>{user}</small> Chat App</span>
       </div>
-
-      <div id="messageList" className="flex-grow overflow-y-auto p-4">
+      <div id="messageList" 
+      className="flex-grow overflow-y-auto p-4" 
+      style={{  backgroundImage: `url(${user === 'Amy' ? 'https://images.pexels.com/photos/20818845/pexels-photo-20818845/free-photo-of-creased-black-paper.jpeg?auto=compress&cs=tinysrgb&w=600' : 'https://images.pexels.com/photos/20818857/pexels-photo-20818857/free-photo-of-crumpled-checkered-sheet-of-paper.jpeg?auto=compress&cs=tinysrgb&w=600'})` }}>
         {MessagesArray.map((message, index) => (
-          <div key={index} className={` ${message.user === user ? 'justify-start' : 'justify-end'}`}>
-            <small className='text-xs font-thin	'>{message.user}</small>
-            <div key={index} className={`my-1 p-2 rounded-md ${message.user === user ? 'bg-blue-300 self-end ' : 'bg-gray-300 self-start'}`}>{message.text}</div> 
-          </div>
-        ))}
+           <div key={index} className={`flex ${message.user === user ? 'justify-start' : 'justify-end'}`}>
+             <div className={`message-container my-1 p-2 rounded-md ${message.user === user ? 'bg-blue-300 self-end' : 'bg-gray-300 self-start'}`}>
+              <small className='text-xs font-thin'>{message.user}</small>
+              <div>{message.text}</div>
+         </div>
+      </div>
+      ))}
       </div>
 
-      <div id="messageInput" className="bg-gray-200 p-4 flex items-center">
+
+      <div id="messageInput" className="bg-gray-200 rounded p-4 flex items-center">
         <input
           id="message"
           type="text"

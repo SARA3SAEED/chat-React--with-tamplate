@@ -10,7 +10,7 @@ const ChatApp = () => {
   };
 
   return (
-    <div className="chat-app flex rounded">
+    <div className="chat-app flex flex-wrap	">
       <ChatWindow user="Amy" MessagesArray={prevMessagesArray} onSendMessage={handleSendMessageToArray} />
       <ChatWindow user="John" MessagesArray={prevMessagesArray} onSendMessage={handleSendMessageToArray} />
     </div>
